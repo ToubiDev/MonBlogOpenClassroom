@@ -1,0 +1,14 @@
+
+<li [ngClass]="{'list-group-item': true,
+
+                'list-group-item-success': loveIts >0,
+
+                'list-group-item-danger': loveIts <0}">
+  <h5 class="pull-right text-muted font-italic">{{created_at | date:'MM/dd/yyyy, hh:mm a' | uppercase}}</h5>
+  <h3 class="font-weight-bold" >{{title}}</h3>
+  <p>{{content}}</p>
+  <div class="btn-toolbar">
+    <button class="btn btn-success" (click)="augmenteLoves()">Love it!</button>
+    <button class="btn btn-danger" (click)="diminueLoves()">Don't love it!!</button>
+  </div>
+</li>
