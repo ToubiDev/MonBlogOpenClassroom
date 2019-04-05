@@ -1,16 +1,19 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Post} from './post.model.';
+import {Subscription} from 'rxjs';
+import {PostsService} from './services/posts.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
 
-  posts = [
-    new Post('Mon premier post','ici le contetu du post blalala',0,new Date()),
-    new Post('Mon deuxieme post','ici le contetu du post blalala',2,new Date()),
-    new Post('Mon troisieme post','ici le contetu du post blalala',-2,new Date())
-  ];
+
+  constructor(){}
+
+  ngOnInit() {
+
+  }
 }
